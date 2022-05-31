@@ -1,0 +1,90 @@
+$light-red : lighten(red, 30%);
+$light-green : lighten(green, 30%);
+$light-grey : lighten(grey, 40%);
+
+.root{
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  &:hover{
+    .x-icon{
+      opacity: 1;
+      transform: scale(1);
+
+    }
+  }
+
+  .x-icon{
+    height: 24px;
+    width: 24px;
+    background: black;
+    background-image: url('../../../assets/delete_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -15px;
+    top: -15px;
+    border-radius: 50%;
+    font-size: 13px;
+    opacity: 0;
+    cursor: pointer;
+
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+    transform: scale(0);
+
+  }
+}
+
+.budget-item{
+  display: flex;
+  width: 100%;
+  background-color: $light-grey;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+
+  p {
+    margin: auto;
+   }
+
+
+  .description{
+    display: flex;
+    align-items: center;
+  }
+
+  .amount{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+}
+
+.income {
+  p {
+      color: green;
+  }
+
+  .amount {
+      background-color: $light-green;
+  }
+}
+
+.expense {
+  p {
+      color: red;
+  }
+
+  .amount {
+      background-color: $light-red;
+  }
+}
