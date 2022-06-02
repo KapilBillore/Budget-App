@@ -9,19 +9,15 @@ import { BudgetItem } from 'src/shared/models/budget-item';
 })
 export class EditItemModalComponent implements OnInit {
 
-  value: BudgetItem;
-
-
   constructor(
     public dialogRef: MatDialogRef<EditItemModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public item: BudgetItem) {}
+    @Inject(MAT_DIALOG_DATA) public item: BudgetItem) { }
 
-  ngOnInit(): void {
-    this.value=this.item;
+  ngOnInit() {
   }
 
-  onSubmitted(updatedItem: BudgetItem){
-    this.dialogRef.close(updatedItem)
+  onSubmitted(updatedItem: BudgetItem) {
+    this.dialogRef.close(updatedItem);
   }
 
 }

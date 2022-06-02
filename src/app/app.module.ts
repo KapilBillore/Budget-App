@@ -30,6 +30,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule
   ],
   providers: [],
+  entryComponents:  [EditItemModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

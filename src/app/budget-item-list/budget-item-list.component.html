@@ -3,7 +3,7 @@
     <div class="income-column">
       <h3>Income</h3>
 
-      <div *ngFor="let item of budgetItems">
+      <div *ngFor="let item of budgetItems; let index=index">
 
         <app-budget-item-card
         *ngIf="item.amount >= 0"
@@ -19,7 +19,7 @@
 
     <div class="expenses-column">
       <h3>Expenses</h3>
-      <div *ngFor="let item of budgetItems">
+      <div *ngFor="let item of budgetItems; let index=index">
 
         <app-budget-item-card
         *ngIf="item.amount < 0"

@@ -14,7 +14,7 @@ export class MainPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   addItem(newItem: BudgetItem) {
